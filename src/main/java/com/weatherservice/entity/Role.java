@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Getter
@@ -20,7 +21,7 @@ public class Role {
     private String id;
 
     @Enumerated(EnumType.STRING)
-    @NonNull
+    @NotNull
     @NaturalId
     @Column(length = 60)
     private UserType name;

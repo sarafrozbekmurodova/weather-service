@@ -8,6 +8,7 @@ import com.weatherservice.model.*;
 import com.weatherservice.repository.RoleRepository;
 import com.weatherservice.repository.UserRepository;
 import com.weatherservice.security.JwtProvider;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

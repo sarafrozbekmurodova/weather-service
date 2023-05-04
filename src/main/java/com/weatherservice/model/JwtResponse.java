@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Data
@@ -12,26 +13,26 @@ import java.util.List;
 @RequiredArgsConstructor
 public class JwtResponse {
 
-    @NonNull
+    @NotNull
     private String token;
 
     private String type = "Bearer";
 
-    @NonNull
+    @NotNull
     private String id;
 
-    @NonNull
+    @NotNull
     private String name;
 
-    @NonNull
+    @NotNull
     private String username;
-    @NonNull
+    @NotNull
     private String lastName;
 
-    @NonNull
+    @NotNull
     private String email;
 
-    @NonNull
+    @NotNull
     private List<String> roles;
 
     public JwtResponse( String token, String type,
@@ -49,4 +50,6 @@ public class JwtResponse {
     }
 
 
+    public JwtResponse(String jwt, String id, String name, String lastName, String username, String email, List<String> roles) {
+    }
 }

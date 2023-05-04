@@ -2,6 +2,8 @@ package com.weatherservice.model;
 
 import lombok.*;
 
+import javax.validation.constraints.NotNull;
+
 @Data
 @Getter
 @Setter
@@ -9,9 +11,9 @@ import lombok.*;
 public class LoginRequest {
 
 
-    @NonNull
+    @NotNull(message = "username is required")
     private String username;
 
-    @NonNull
+    @NotNull(message = "password is required")
     private String password;
 }

@@ -3,6 +3,7 @@ package com.weatherservice.model;
 import lombok.*;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Set;
 
@@ -12,23 +13,23 @@ import java.util.Set;
 @NoArgsConstructor
 public class SignupRequest {
 
-    @NonNull
+    @NotNull(message = "first name is required")
     @Size(min = 3, max = 20)
     private String name;
-    @NonNull
+
     @Size(min = 3, max = 20)
     private String lastName;
 
-    @NonNull
+    @NotNull(message = "username is required")
     @Size(min = 3, max = 20)
     private String username;
 
 
-    @NonNull
+    @NotNull(message = "password is required")
     @Size(min = 6, max = 30)
     private String password;
 
-    @NonNull
+    @NotNull(message = "email is required")
     @Email
     @Size( max = 50)
     private String email;

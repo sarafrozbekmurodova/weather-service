@@ -23,6 +23,8 @@ public class CitiesEntity {
 
     @Column(nullable = false, length = 5)
     private String code;
+    @OneToMany
+    private Set<WeatherEntity> weather;
 
     @OneToMany(mappedBy = "cities")
     private Set<CountryEntity> countries;
