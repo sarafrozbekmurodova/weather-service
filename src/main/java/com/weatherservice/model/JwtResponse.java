@@ -10,7 +10,6 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class JwtResponse {
 
     @NotNull
@@ -48,7 +47,6 @@ public class JwtResponse {
         this.email = email;
         this.roles = roles;
     }
-
 
     public JwtResponse(String jwt, String id, String name, String lastName, String username, String email, List<String> roles) {
     }

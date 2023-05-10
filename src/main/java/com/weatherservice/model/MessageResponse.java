@@ -9,7 +9,6 @@ import javax.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
-@RequiredArgsConstructor
 public class MessageResponse {
 
     @NotNull
